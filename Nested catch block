@@ -1,0 +1,37 @@
+package thursdaylab;
+
+public class Exception
+{
+      public static void main(String arg[])
+      {
+     System.out.println("main method started");
+   
+     try
+     {
+     System.out.println(10/0);
+   
+     }
+     catch(ArithmeticException e)
+     {
+     System.out.println(e);
+     try
+     {
+     String s=null;
+     System.out.println(s.toLowerCase());
+     }
+     catch(NullPointerException n)
+     {
+     System.out.println(n);
+     }
+     }
+     System.out.println("main method end");
+      }
+}
+ 
+
+output:
+
+main method started
+java.lang.ArithmeticException: / by zero
+java.lang.NullPointerException: Cannot invoke "String.toLowerCase()" because "s" is null
+main method end
