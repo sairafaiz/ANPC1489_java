@@ -1,0 +1,36 @@
+package thursdaylab;
+
+public class Exception
+{
+      public static void main(String arg[])
+      {
+     System.out.println("main method started");
+   
+     try {
+         System.out.println("start");
+         int a=20,b=0,c;
+         c=a/b;
+         System.out.println(c);
+         System.out.println("start 1");
+         
+     }
+     catch(ArithmeticException e)
+     {
+     System.out.println(e);
+     }
+     finally
+     {
+     System.out.println("end");  
+     }
+          System.out.println("main method end");
+      }
+}
+
+output
+
+main method started
+start
+java.lang.ArithmeticException: / by zero
+end
+main method end
+
